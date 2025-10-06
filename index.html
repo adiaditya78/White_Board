@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="tools">
+            <div class="tool-group">
+                <div id="pen" title="Pen" onclick="pen()">
+                    <i class="fa-solid fa-pen"></i>
+                </div>
+                <input type="range" id="penSize" min="1" max="50" value="5" title="5" oninput="pen()">
+            </div>
+            <div id="color" title="Color">
+                <input type="color" name="current_col" id="colorChanger" value="#ff0000" oninput="pen()">
+            </div>
+            <div class="tool-group" >
+                <div id="eraser" title="Eraser" onclick="eraser()">
+                    <i class="fa-solid fa-eraser"></i>
+                </div>
+                <input type="range" id="eraserSize" min="1" max="50" value="5" title="5" oninput="eraser()">
+            </div>
+            <div id="download" title="Download">
+                <i class="fa-solid fa-download"></i>
+            </div>
+            <div id="undo" title="Undo">
+                <i class="fa-solid fa-rotate-left"></i>
+            </div>
+            <div id="redo" title="Redo">
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+        </div>
+    </header>
+    <div id="canvas-con">
+        <canvas id="myCanvas"></canvas>
+    </div>
+</body>
+<script src="whiteBoard.js"></script>
+</html>
